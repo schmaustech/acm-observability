@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: thanos-object-storage
+type: Opaque
+stringData:
+  thanos.yaml: |
+    type: s3
+    config:
+      bucket: observability-rhacm-defd4d4f-d2bb-440b-b8ce-5df7f39057ef
+      endpoint: s3.openshift-storage.svc:443
+      insecure: false
+      access_key: 9DXuOUVe7qDen3j8r5qz
+      secret_key: vqIc6gX5EhXgCqcRMhLcaICcRBSmYqjz7rttvSVo
+      http_config:
+        insecure_skip_verify: true
